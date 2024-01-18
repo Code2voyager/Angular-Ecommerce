@@ -1,0 +1,85 @@
+<head>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <nav class="navbar navbar-fixed-top" style="background-color: #3f51b5;font-size:18px;">
+    <a class="navbar-brand" href="/appbody"> 
+    <i class="fa fa-shopping-bag fa-lg" aria-hidden="true" style="color:white;size: 20px"></i><a style="color:white;"> Jio Ecommerce</a>
+    </a>
+   
+    <div class="form-inline" id="navbarSupportedContent">
+     
+      <input (ngModelChange)="clearsearch()"  id="inputs"  class="test" [(ngModel)]="searchItem"   style="border-inline: inherit;"> &nbsp;&nbsp;
+      <i class="fa fa-search  fa-lg" aria-hidden="true"  style="border: 0px transparent;cursor: pointer; " (click)="search(searchItem)" ></i> 
+      
+      <div id="searchB" style="margin-left: 35%;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a   (click)="pages(x)"  class="dropdown-item"*ngFor="let x of filteredList">{{x.PRODUCT_NAME}}</a></div>
+      
+        <!-- <ul class="navbar-nav mr-auto"  id="searchB" style="background-color: blanchedalmond; display:none; ">
+          <li class="nav-item " *ngFor="let x of filteredList"  >
+            {{x.PRODUCT_NAME}}
+          </li>
+        </ul> -->
+    </div>
+ 
+<a class="i1" style="color: beige" href="/appaddcart">
+  <i class="fa fa-shopping-cart fa-lg" aria-hidden="true" style="color: white;"></i>
+ Cart
+</a> 
+</nav>  
+
+<nav class="navbar-expand-lg  navbar-fixed-top" style="background-color: #4658c0; padding:1%;  font-family: Poppins-Bold; font-size:18px;" >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgb(252, 252, 252); cursor: pointer;">
+              Product Category
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/appkitchen">Kitchen</a>
+              <li class="dropdown-item dropdown-submenu p-0">
+                  <a  data-toggle="dropdown" class="dropdown-toggle" style="margin-left: 22px;cursor: pointer;">Fashions </a>
+                  <ul class="dropdown-menu ml-2">
+                    <li class="dropdown-item ">
+                      <!-- <a  class="text-black w-100">Women's Fashion</a> -->
+                      <a class="dropdown-item  "  href="/appwomenfashion"> Women's Fashion</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a class="dropdown-item"  href="/appmenfashion"> Men's Fashion</a>
+                    </li>
+                   
+                  </ul>
+                </li>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
+              <!-- <a class="dropdown-item"  href="/appwomenfashion"> Women's Fashion</a>
+              <a class="dropdown-item"  href="/appmenfashion"> Men's Fashion</a> -->
+              <a class="dropdown-item"  href="/appfurniture">Furniture</a>
+              <a class="dropdown-item"  href="/appbooks">Books</a>  
+            </div>
+        <li class="nav-item ">
+          <a class="nav-link" href="#" style="color: white;" href="/appelectronics">Electronics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: white;" href="/appaccessories">Accessories</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: white;" href="/appkids">Kids </a>
+        </li> 
+      
+      </ul> 
+   
+    <!-- ----------------------------------   -->
+     <div id="logoutB" style="display: none">
+            <a  style="color: white;">{{name}} {{surname}} </a>
+        &nbsp;&nbsp;
+          <!-- <li class="nav-item"></li> -->
+          <!-- <a class="i1" style="color: beige" href="/appaddcart">Logout</button> -->
+        
+        <!-- <a class="nav-link2"  style="color: white">{{name}} </a> -->
+        <a  (click)="logout()" style="color: white;cursor: pointer;">Logout</a>
+     </div>
+     <div id="loginB">
+      <a href="/applogin1" style="color: white;">Login </a>
+     </div>
+   </div>
+  
+  </nav>

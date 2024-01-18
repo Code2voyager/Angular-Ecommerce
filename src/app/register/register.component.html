@@ -1,0 +1,104 @@
+<app-header2></app-header2>
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form class="login100-form validate-form" >
+					<span class="login100-form-title p-b-70">
+						Registration
+          </span>
+        <br>
+					<span class="login100-form-avatar">
+						<img src="/assets/images/img-01.png">
+					</span>
+					<form [formGroup]="Rform">
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" >
+						<input class="input100" type="text"  placeholder="Firstname"  name="firstname" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" required>
+						<div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.fname.errors.required">First Name is required</div>
+                        </div>
+						
+						<span class="focus-input100" data-placeholder="Firstname"></span>
+						<!-- <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.fname.errors.required">First Name is required</div>
+                        </div> -->
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-50">
+						<input class="input100" type="text"  placeholder="Lastname" name="lastname" formControlName="lname"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }"  required>
+						<div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+							<div *ngIf="f.lname.errors.required">Last Name is required</div>
+						</div>
+						<span class="focus-input100" data-placeholder="Lastname"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-50">
+              <input class="input100"  type="text"  placeholder="Email" name="email" formControlName="emailid" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.emailid.errors }" required>
+			  <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
+				<div *ngIf="f.emailid.errors.required">Email Id is required</div>
+			<div *ngIf="f.emailid.errors.pattern">Email pattern is required</div> 
+		    </div> 
+			  <span class="focus-input100" data-placeholder="Email"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-50">
+                <input class="input100"   type="text"  size="10" placeholder="Phone" name="Phone" formControlName="Phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Phone.errors }" required>
+				<div *ngIf="submitted && f.Phone.errors" class="invalid-feedback" >
+					<div *ngIf="f.Phone.errors.required">Phone No. is required</div>
+				 </div>
+				 <div *ngIf="Rform.get('Phone').hasError('maxlength')">  
+						<span style="color: red;">Phone Number requied only 12 characters.</span>  
+					  </div>
+				
+				<span class="focus-input100" data-placeholder="Phone"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" >
+                  <input class="input100" type="text" placeholder="Username" name="Username" formControlName="uname"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.uname.errors }" required>
+				  <div *ngIf="submitted && f.uname.errors" class="invalid-feedback">
+					<div *ngIf="f.uname.errors.required">Username is required</div>  </div>
+				  <span class="focus-input100" data-placeholder="Username"></span>
+                </div>
+
+          <div class="wrap-input100 validate-input m-b-50">
+              <input class="input100" type="password" placeholder="Enter Password" name="psw" formControlName="passphase" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.passphase.errors }" required>
+			  <div *ngIf="submitted && f.passphase.errors" class="invalid-feedback">
+				<div *ngIf="f.passphase.errors.required">Password is required</div> 
+				<!-- <div *ngIf="f.passphase.errors.minLength">6 digit password is required</div> -->
+			</div>
+			  <span class="focus-input100" data-placeholder="Password"></span>
+            </div>
+<br><br>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit" (click)="submit()">
+						Register
+						</button>
+					</div>
+					</form>
+				<br>
+				
+					<ul class="login-more p-t-190">
+
+						<li>
+							<span class="txt1">
+								Already have an account?
+							</span>
+
+							<a href="/applogin" class="txt2">
+								Sign in
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+   
+   <footer class="page-footer font-small">
+
+      
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://jioecommerce.com/"> JioEcommerce.com</a>
+    </div>
+ 
+  
+</footer> 

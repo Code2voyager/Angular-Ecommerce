@@ -1,0 +1,51 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+ .d-block{
+   /* height:60%; */
+    margin-top: 4%; 
+    margin-left: 8%;
+    border-color: black;
+    /* box-shadow: 0 2px 1px -1px rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);  */
+    box-shadow: 5px 10px 18px #888888;
+    
+}  
+
+/* .d-block1 {
+  image-resolution: 499px;
+} */
+
+ .carouselslide{
+   
+  position: relative;
+  right: 16%;
+  float: right;
+   width: 378px;
+   height: 233.09;
+   margin-top: 2%;
+   /* box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);  */
+   box-shadow: 5px 10px 18px #888888;
+}
+.example-card{
+  position: relative;
+  margin-top: 23%; 
+   left: 56%;  
+   width: 378px;
+   height:233.09px; 
+   /* box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);  */
+   box-shadow: 5px 10px 18px #888888;
+} 
+/* .carousel-indicators {
+  
+  margin-top: 99%;
+}
+
+   .carousel-indicators ol {
+      width: 90%;
+  }
+
+
+  .carousel-indicators li{
+      height: 3px !important;
+      border-radius: 0px !important;
+      width: 25%;
+  }  */

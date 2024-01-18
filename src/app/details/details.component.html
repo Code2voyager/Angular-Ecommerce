@@ -1,0 +1,108 @@
+<app-header2></app-header2>
+<!-- [formGroup]="Pform" -->
+<body>
+<mat-grid-list cols="3"  *ngIf="response">
+        <mat-grid-tile>
+          <img mat-card-image src="{{response.productimage}}" style="margin-left:18%;">
+        </mat-grid-tile> 
+        <mat-grid-tile >
+            <div>
+                                      
+ <table>  
+<tr>             
+<b>ProductName:</b> {{response.PRODUCT_NAME}}
+</tr>
+<tr>  
+<b>Price:</b>INR.{{response.PRICE}}
+</tr>
+<tr>  
+<b>Availablity:</b> {{response.STOCK}}
+<div id="errormessage" style="display: none; color: red;">
+stock is not available
+</div>
+</tr>
+<!-- <tr>  
+ <b>Productid:</b> {{response.PRODUCT_ID}}
+</tr> -->
+<tr id="amt1" >
+  <label><b>Quantity:</b></label>&nbsp;&nbsp;
+    <select  [(ngModel)]="select">
+        <option value="1" >1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+     
+</tr> 
+&nbsp;
+</table>
+
+<!-- <mat-card-actions> -->
+  <!-- Button trigger modal -->
+   <!-- <button id="hide" type="button" style="display: none;" class="btn btn-primary"  data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+<button type="button" [disabled]="response.STOCK == 'Stock not available'"  class="btn btn-primary" data-toggle="modal" (click)="cart()" (click)="update()">
+   Add Cart
+  </button>
+ 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" >&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+        <p>Added Successfully</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cart()" (click)="update()" >View Cart</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+          <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+       &nbsp;&nbsp;
+      
+       <button type="button" class="btn btn-primary" [disabled]="response.STOCK == 'Stock not available'"  data-toggle="modal" data-target=".bd-example-modal-sm"  *ngIf="response" (click)="check(response.PRODUCT_NAME,response.PRICE)">Checkout</button>
+
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+ 
+
+      <!-- <button type="button" class="btn btn-primary" (click)="check()"  id="checkbtn">Checkout</button> -->
+
+     
+            
+
+    </div>  
+        </mat-grid-tile>
+      </mat-grid-list>
+    </body>
+
+      
+  <footer class="page-footer font-small">
+
+      
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://jioecommerce.com/"> JioEcommerce.com</a>
+    </div>
+    <!-- Copyright -->
+  
+</footer>
+
+      
+
+
+

@@ -1,0 +1,64 @@
+ <app-header2></app-header2>
+ <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-70">
+						Login
+          </span>
+        <br>
+					<span class="login100-form-avatar">
+						<img src="/assets/images/img-01.png" >
+					</span>
+                    <form [formGroup]="Lform">
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" placeholder="Username" name="Username" formControlName="uname"class="form-control" [ngClass]="{ 'is-invalid': submitted && f.uname.errors }"  required>
+						<div *ngIf="submitted && f.uname.errors" class="invalid-feedback">
+							<div *ngIf="f.uname.errors.required">Username is required</div>  </div>
+						
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="password"  placeholder="password" name="psw" formControlName="pswd" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pswd.errors }" required>
+						<div *ngIf="submitted && f.pswd.errors" class="invalid-feedback">
+							<div *ngIf="f.pswd.errors.required">Password is required</div> </div>
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+<br><br>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit" (click)="submit()">
+							Login
+						</button>
+					</div>
+				</form>
+       <br>
+					<ul class="login-more p-t-190">
+
+						<li>
+							<span class="txt1">
+								Don’t have an account?
+							</span>
+
+							<a href="/appregister" class="txt2">
+								Sign up
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+        
+     
+        <!-- onclick="window.location.href = '/appbody';"  -->
+
+        <footer class="page-footer font-small">
+
+      
+          <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://jioecommerce.com/"> JioEcommerce.com</a>
+          </div>
+          <!-- Copyright -->
+        
+      </footer>

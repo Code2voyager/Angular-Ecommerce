@@ -1,0 +1,44 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+ 
+
+
+.form{
+  
+  margin-right:50%;
+  
+  
+}
+
+.nav{
+  height: 50%;
+}
+
+/* .center {
+  display: block;
+  margin-left: 39%;
+  margin-right: auto;
+  width: 28%;
+  background-color: black;
+} */
+/*  */
+
+.nav-link2{
+    float: right;
+    margin-right: 18%;
+    size: 15%;
+  
+  
+}
+
+.navbar{
+  height:30%;
+  font-family:Roboto, "Helvetica Neue", sans-serif;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0)
+  
+}
+.i1{
+  padding-right:18%;
+}
+
+

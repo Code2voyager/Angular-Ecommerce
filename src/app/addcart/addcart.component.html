@@ -1,0 +1,65 @@
+<app-header2></app-header2>
+<head>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'> 
+  </head>
+<!-- response table -->
+ <table class="table">
+
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Product</th>
+       <th scope="col" required>Quantity</th>
+      <th scope="col">Price</th>
+    <th scope="col"></th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of response">
+      <td>{{r.PRODUCT_NAME}}</td>
+       <td>{{r.Quantity}}</td>
+      <td>{{r.PRICE*r.Quantity}}</td>
+      <td>
+       {{demo}}
+      </td>
+     
+    </tr> 
+  </tbody>
+</table>
+
+<!-- checkout button -->
+   
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float:right; display:block; margin-right:99px;">
+    Checkout
+  </button>
+  
+   
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="false">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <h4>Proceed for Payment</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"  data-dismiss="modal" (click)="check()" >Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary"  style="float:right; display:block; margin-right:99px;" *ngFor="let r of response" (click)="delete(r.PRODUCT_NAME)">
+    Delete
+  </button>
+  
+   
+ 
+
+  

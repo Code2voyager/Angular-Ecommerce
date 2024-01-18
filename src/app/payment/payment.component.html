@@ -1,0 +1,89 @@
+<app-header2></app-header2>
+<body>
+    <main class="page payment-page">
+      <section class="payment-form dark">
+        <div class="container">
+          <div class="block-heading">
+            <h2>Payment</h2>
+            </div>
+
+
+            <form>
+            <div class="products">
+              <h3 class="title">Checkout</h3>
+              <div *ngIf="!PRODUCT_NAME">
+              <div class="item"  *ngFor="let r of response">
+
+                <div>
+                <span class="price">{{r.PRICE*r.Quantity}}</span>
+                <span class="item-name">{{r.PRODUCT_NAME}}</span>
+                </div>
+                </div>
+                
+                <!-- <p class="item-description">Lorem ipsum dolor sit amet</p> -->
+                
+              </div>
+              <div *ngIf='PRODUCT_NAME'>
+                <span class="price">{{response.PRICE*response.Quantity}}</span>
+                
+                <span class="item-name">{{response.PRODUCT_NAME}}</span>
+              </div>
+              <!-- <div>total{{r.PRICE*r.PRODUCT_NAME}}</div> -->
+             
+               <div class="total" >
+                  <span class="price">{{total}}</span>
+                 <span> Total</span>
+                  
+              </div> 
+            </div>
+
+
+            <div class="form-group col-sm-8">
+               <b><label for="exampleFormControlTextarea1">Enter the Address</label></b>
+                <textarea id="exampleFormControlTextarea1"  class="form-control" rows="3" placeholder="Address here ...."></textarea>
+              </div>
+            <!-- <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter the Address</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div> -->
+              <br>
+              <div class="form-group col-sm-8" >
+               <b><label for="exampleFormControlTextarea1">Re-Enter the Address</label></b>
+                  <textarea id="exampleFormControlTextarea1"  class="form-control" rows="3" placeholder="Address here ...."></textarea>
+              </div>
+              <br>
+          </form>  
+          <br>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#smallShoes" style=" margin-left: 30%;right:50%; width: 40%;">
+            Proceed
+            </button>
+            
+            <!-- The modal -->
+            <div class="modal fade" id="smallShoes"  role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            
+            <div class="modal-header">
+            <h4 class="modal-title" id="modalLabelSmall">Order Alert</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            
+            <div class="modal-body">
+           Order has been placed successfully
+            </div>
+            <button type="button" id="productdel" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#smallShoes" (click)="proceed()">
+              Close
+              </button>
+            <!-- <button type="button" class="btn btn-primary btn-block" (click)="proceed()">Close</button> -->
+            </div>
+            </div>
+            </div>
+          <!-- <div class="form-group col-sm-5" style="left:30%;">
+              <button type="button" class="btn btn-primary btn-block" (click)="proceed()">Proceed</button>
+            </div> -->
+        </div>  
+        </section>
+    </main>
+</body>

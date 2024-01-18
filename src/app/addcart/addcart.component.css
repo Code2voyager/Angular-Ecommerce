@@ -1,0 +1,14 @@
+
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+ .table{
+  
+  margin-top: 3%; 
+  border-style: solid; 
+   border-width: 2px; 
+   background-color: beige;
+   width: 85%;
+    margin-left:5%;
+  box-shadow: 5px 10px 18px #888888;
+  
+} 

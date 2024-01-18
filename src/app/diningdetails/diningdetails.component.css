@@ -1,0 +1,10 @@
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+.mat-grid-tile {
+    width: 90px;
+    height: 90px;
+  }
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  }

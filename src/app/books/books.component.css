@@ -1,0 +1,56 @@
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+
+.example-card {
+  max-width: 900px;
+  background-color:beige;
+  
+
+}
+
+
+
+
+  .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+.mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display:flex;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+}
+.mat-button, .mat-icon-button, .mat-stroked-button {
+  color: inherit;
+  background: 0 0;
+}
+
+.mat-card-actions .mat-button:first-child, .mat-card-actions .mat-raised-button:first-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mat-card-actions .mat-button, .mat-card-actions .mat-raised-button {
+  margin: 0 8px;
+}
+
+.example{
+  padding-left:40%;
+float: top;
+}
