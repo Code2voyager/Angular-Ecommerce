@@ -1,27 +1,42 @@
-# App
+# Shopping E-Commerce Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
+A shopping e-commerce web application built using **Angular**, **TypeScript**, and **Bootstrap**.  
+This project demonstrates core e-commerce functionality and responsive frontend development using Angular.
 
-## Development server
+## Features
+- Product listing with category-based filtering
+- Search functionality for products
+- Add-to-cart and cart management
+- User authentication with Sign Up and Login
+- Responsive UI using Bootstrap for mobile and desktop views
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Tech Stack
+- Angular
+- TypeScript
+- Bootstrap
+- HTML5
+- CSS3
+- Angular CLI
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
+- Node.js
+- Angular CLI
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Code2voyager/Angular-Ecommerce.git
+2. Navigate to the project directory:
+  cd <repository-name>
+3. Install dependencies:
+  npm install
+4. Run the development server:
+  ng serve or ng s
+5. Open your browser:
+   http://localhost:4200/ or whichever post it displays for you.
+7. 
+8. 
+   ```bash
+   git clone https://github.com/Code2voyager/<repository-name>.git
